@@ -13,6 +13,7 @@ body::-webkit-scrollbar {
   height: 0px;
 }
 
+body nav:nth-child(1) {
   grid-area: nav;
   background-color: rgb(15, 15, 36);
   height: 60px;
