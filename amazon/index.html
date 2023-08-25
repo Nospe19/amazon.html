@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Amazon.com.Gasta menos. Sonrie</title>
+    <script  src="https://kit.fontawesome.com/04efbb9dd5.js" crossorigin="anonymous"></script>
+    <link rel="icon" href="data:image/png;base64,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">
+<body>
+    <nav id="nav">
+        <img id="logoprincipal"
+            src="https://o.remove.bg/downloads/2591f096-4d76-43df-85b2-604abc50c1fd/images-removebg-preview.png" 
+            alt="">
+        
+        <div id="borderlogop">
+        </div>
+
+        <div id="divicon" ></div>
+            <p id="pnavf">Enviar a Manuel</p>
+            <p id="pnavs">Puerto Ca... 2050</p>
+            <i id="iconnav" class="fa-solid fa-location-dot"></i>
+            
+            <select name="fmenu" id="fmenu" class="fmenu">
+                <option class="fmenu__todos" value="todos" selected disabled hidden><p>Todos</p></option>
+                <option class="fmenu__deptos" id="deptos" value="">Todos los departamentos</option>
+                <option class="fmenu__arte" id="arte" value="">Arte y Artesanias</option>
+                <option class="fmenu__automotriz" id="auto">Automotriz</option>
+                <option class="fmenu__bebe" id="baby" value="">Bebe</option>
+                <option class="fmenu__vg" id="vg" value="">Videojuegos</option>
+                <option class="fmenu__deportes" id="deportes" value="">Deportes</option>
+                <option class="fmenu__belleza" id="belleza" value="">Belleza</option>
+                <option class="fmenu__music" id="music" value="">Musica</option>
+                <option class="fmenu__home"  id="home" value="">Hogar</option>
+                <option class="fmenu__tools" id="tools" value="">Herramientas y mejoramiento del hogar</option>
+                <option class="fmenu__cook" id="cook" value="">Hogar y cocina</option>
+                <option class="fmenu__travels" id="travels" value="">Viajes</option>
+                <option class="fmenu__maleta" id="maleta" value="">Equipaje</option>
+                <option class="fmenu__men" id="men" value="">Moda de Hombres</option>
+                <option class="fmenu__women" id="women" value="">Moda de Mujeres</option>
+                <option class="fmenu__kids" id="kids" value="">Moda de niños</option>
+                <option class="fmenu__moda" id="moda" value="">Moda de niñas</option>
+                <option class="fmenu__ciber" id="ciber" value="">Electronicos</option>
+                <option class="fmenu__pcs" id="pcs" value="">Computadores</option>
+                <option class="fmenu__books" id="books" value="">Libros</option>
+                <option class="fmenu__prime" id="prime" value="">Prime Video</option>
+                <option class="fmenu__toys" id="toys" value="">Juguetes</option>
+                <option class="fmenu__off" id="off" value="">Ofertas</option>
+                <option class="fmenu__soft" id="soft" value="">Software</option>
+                <option class="fmenu__hard" id="hard" value="">Hardware</option>
+                <option class="fmenu__cell" id="cell" value="">Celulares</option>
+                <option class="fmenu__nike" id="nike" value="">Zapatos</option>
+            </select>
+        </div>
+
+        <input id="navbar" placeholder="Buscar Amazon" type="text">
+        <button id="logosearch" class="fa-solid fa-magnifying-glass"></button>
+
+        <div id="united">
+            
+            <img id="usa"
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSD65wWkER-hp7gL0n05PKy2dNWn0YbDRQG7A&usqp=CAU" 
+                alt="">
+            <p id="es">ES ▼</p>
+        </div>
+
+        <div id="cuenta"></div>
+            <p id="manu">Hola Manuel</p>
+            <p id="listas">Cuentas y Listas </p>
+            <p id="arrow">▼</p>
+
+        <div id="devs"></div>
+            <p id="devoluciones">Devoluciones</p>
+            <p id="pedidos">y Pedidos</p>
+
+        <div id="car"></div>
+            <i id="imgcar" class="fa-solid fa-cart-shopping"></i>    
+            <p id="carrito">Carrito</p>
+
+    </nav>
+    
+    
+    <main id="main">
+        <!--Menu lateral-->
+        <section id="header">
+                <input type="checkbox" name="check" id="check">
+                <label id="labela" for="check"><i class="fa-solid fa-bars"></i>Todo</label>
+                <label id="labelb" for="check"><i class="fa-solid fa-x"></i></label>
+                <div id="fondo"></div>
+            <div id="box">
+                <div id="divbox">
+                    <i class="fa-regular fa-user"></i>
+                    <p id="heyma">Hola, manuel</p>
+                </div>
+            
+                <section id="scroolbar">
+                    <p id="dispo">Contenido y Dispositivos Digitales</p>
+                    <div id="amusic">
+                        <p id="zona">Amazon Music</p>
+                        <i id="chevrona" class="fa-solid fa-chevron-right"></i>
+                    </div>
+
+                    <div id="kindle">
+                        <p>E-readers Kindle y Libros</p>
+                        <i id="chevrona" class="fa-solid fa-chevron-right"></i>
+                    </div>
+
+                    <div id="appstore">
+                        <p>Amazon Appstore</p>
+                        <i id="chevrona" class="fa-solid fa-chevron-right"></i>
+                    </div>
+                    <hr>
+                    <p id="depto">Buscar Por Departamento</p>
+
+                    <div id="electro">
+                        <p>Electronicos</p>
+                        <i id="chevrona" class="fa-solid fa-chevron-right"></i>
+                    </div>
+
+                    <div id="computador">
+                        <p>Computadoras</p>
+                        <i id="chevrona" class="fa-solid fa-chevron-right"></i>
+                    </div>
+
+                    <div id="smarth">
+                        <p>Smart Home</p>
+                        <i id="chevrona" class="fa-solid fa-chevron-right"></i>
+                    </div>
+
+                    <div id="artesa">
+                        <p>Arte y Artesanias</p>
+                        <i id="chevrona" class="fa-solid fa-chevron-right"></i>
+                    </div>
+
+                    <div id="all">
+                        <p>Ver Todo</p>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </div>
+                    <hr>
+
+                    <p id="funcionalidades">Programas y Funcionalidades</p>
+
+                    <div id="playstore">
+                        <p>Tarjetas de Regalo</p>
+                        <i id="chevrona" class="fa-solid fa-chevron-right"></i>
+                    </div>
+
+                    <div id="interes">
+                        <p>Comprar por Interes</p>
+                    </div>
+
+                    <div id="amazonl">
+                        <p>Amazon Live</p>
+                        <i id="chevrona" class="fa-solid fa-chevron-right"></i>
+                    </div>
+
+                    <div id="sinter">
+                        <p>Tienda Internacional</p>
+                        <i id="chevrona" class="fa-solid fa-chevron-right"></i>
+                    </div>
+
+                    <div id="watch">
+                        <p>Ver Todo</p>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </div>
+                    <hr>
+
+                    <p id="settings">Ayuda y Configuracion</p>
+
+                    <div id="acount">
+                        <p>Tu Cuenta</p>
+                    </div>
+
+                    <div id="caste">
+                        <p>Español</p>
+                    </div>
+
+                    <div id="country">
+                        <p>Estados Unidos</p>
+                    </div>
+
+                    <div id="razon">
+                        <p>Servicio al Cliente</p>
+                    </div>
+
+                    <div id="exit">
+                        <p>Salir</p>
+                    </div>
+                </section>
+            </div>
+        </section>
+        
+        
+        <section id="parrafosestilos">
+            <p id="ofertas">Ofertas del Dia</p>
+            <p id="shoppin">Comprar de Nuevo</p>
+            <p id="cliente">Servicio al Cliente</p>
+            <p id="talis">Listas</p>
+            <p id="gift">Tarjeta de Regalo</p>
+            <p id="sell">Vender</p>
+        </section>
+        
+            <!--Divs hover de border-->
+        <section id="ddiv" class="decorationdivs">
+            <div id="checkdiv"></div>
+            <div id="del-dia"></div>
+            <div id="again"></div>
+            <div id="service"></div>
+            <div id="listado"></div>
+            <div id="card"></div>
+            <div id="venderd"></div>
+        </section>
+
+        <section id="bg">
+            <div id="les">
+                <p>Hogar y Cocina por menos de USD 30</p>
+                <img 
+                    src="https://images-na.ssl-images-amazon.com/images/G/01/US-hq/2022/img/Amazon_Exports/XCM_CUTTLE_1469391_2584745_379x304_1X_en_US._SY304_CB609304299_.jpg" 
+                    alt="">
+                <a href="">Compra ahora</a>
+            </div>
+            
+            <div id="juguetes">
+                <p>Juguetes por menos de USD 30</p>
+                <img 
+                    src="https://images-na.ssl-images-amazon.com/images/G/01/US-hq/2022/img/Amazon_Exports/XCM_CUTTLE_1469244_2584128_379x304_1X_en_US._SY304_CB609318944_.jpg" 
+                    alt="">
+                <a href="">Compre ahora</a>
+            </div>
+            
+            <div id="spacea">
+                <p id="pp">Renueva tu espacio</p>
+                <img id="fimg"
+                    src="https://images-na.ssl-images-amazon.com/images/G/01/launchpad/2023/Gateway/January/DesktopQuadCat_186x116_LP-HP_B08MYX5Q2W_01.23._SY116_CB619238939_.jpg" 
+                    alt=""> 
+                <p id="pfimg">comedor</p>
+
+                <img id="simg"
+                    src="https://images-na.ssl-images-amazon.com/images/G/01/launchpad/2023/Gateway/January/DesktopQuadCat_186x116_home_B08RCCP3HV_01.23._SY116_CB619238939_.jpg" 
+                    alt="">
+                <p id="psimg">Inicio</p>
+
+                <img id="timg"
+                    src="https://images-na.ssl-images-amazon.com/images/G/01/launchpad/2023/Gateway/January/DesktopQuadCat_186x116_kitchen_B0126LMDFK_01.23._SY116_CB619238939_.jpg" 
+                    alt="">
+                <p id="ptimg">Cocina</p>
+
+                <img id="foimg"
+                    src="https://images-na.ssl-images-amazon.com/images/G/01/launchpad/2023/Gateway/January/DesktopQuadCat_186x116_health-beauty_B07662GN57_01.23._SY116_CB619238939_.jpg" 
+                    alt="">
+                <p id="pfoimg">Salud y Belleza</p>
+
+                <a href="">Mas informacion</a>
+                    
+            </div>
+            <div id="secu">
+                <p>Comprar útiles escolares esenciales</p>
+                <img 
+                    src="https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Events/2022/BTS/Fuji_dash_BTS_1X._SY304_CB630084689_.jpg" 
+                    alt="">
+                <a href="">Mas informacion</a>
+            </div>
+            <i id="chevronal" class="fa-solid fa-chevron-left"></i>
+            <i id="chevronar" class="fa-solid fa-chevron-right"></i>
+        </section>
+
+        <section id="contentpr">
+            <div id="chef">
+                <p>Hogar y Cocina</p>
+                <img 
+                    src="https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Fuji/2021/September/Fuji_Dash_en_US._SY304_CB641328052_.jpg" 
+                    alt="">
+                <a href="Ver mas">Ver mas</a>
+            </div>
+            <div id="tablea">
+                <p>E-readers Kindle</p>
+                <img 
+                    src="https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Fuji/2021/September/DashboardCards/Fuji_Desktop_Dash_Kindle_1x._SY304_CB639752818_.jpg" 
+                    alt="">
+                <a href="Comprar ahora">Comprar ahora</a>
+            </div>
+            <div id="renove">
+                <p>Ideas para renovar tu hogar</p>
+                <img 
+                    src="https://images-na.ssl-images-amazon.com/images/G/01/home/THILGMA/SpringEvent2023/XCM_CUTTLE_1559454_3018199_379x304_1X_en_US._SY304_CB592739737_.jpg" 
+                    alt="">
+                <a href="">Compra mejoras para la cocina</a>
+            </div>
+            <div id="trending">
+                <p>Descubre las tendencias en moda</p>
+                <img 
+                    src="https://images-na.ssl-images-amazon.com/images/G/01/softlines/shopbop/ingress/2023/March/mp_20230219_ff_desktopsinglecategory_desktop_379x304_1._SY304_CB612639047_.jpg" 
+                    alt="">
+                <a href="">Mas informacion</a>
+            </div>
+        </section> <br>
+
+        <section id="midlea">
+            <div id="modimi" style="border-color: rgb(187, 184, 184);">
+                <p id="modifp">Después de ver las páginas de detalles de productos, consulta esta sección para encontrar una manera sencilla de navegar a las páginas de tu interés.</p>
+                <p id="modisp">Ver o modificar <br> historial de <br> navegacion</p>
+            </div>
+        </section>
+
+        <div id="finalopen">
+            <a href="index.html">Inicio de Pagina</a>
+        </div>
+
+        <section id="finals">
+            <div id="fcolum">
+                <p class="hcolum">Conócenos</p>
+                <p class="pcolum">Trabaja en <br> Amazon</p>
+                <p class="pcolum">Blog</p>
+                <p class="pcolum">Acerca de <br> Amazon</p>
+                <p class="pcolum">Relaciones <br> con los <br> Inversionistas Amazon</p>
+                <p class="pcolum">Dispositivos <br>Amazon</p>
+                <p class="pcolum">Amazon <br> Science </p>
+            </div>
+
+            <div id="scolum">
+                <p class="hcolum">Gana Dinero con Nosotros</p>
+                <p class="pcolum">Vender productos en Amazon</p>
+                <p class="pcolum">Vende en Amazon Business</p>
+                <p class="pcolum">Vender aplicaciones en <br> Amazon</p>
+                <p class="pcolum">Programa de Afiliados</p>
+                <p class="pcolum">Anuncia tus Productos</p>
+                <p class="pcolum">Publica tu Libro en Kindle</p>
+                <p class="pcolum">Habilita un Amazon Hub</p>
+                <p class="pcolum">› Ver más Gana Dinero con <br> Nosotros</p>
+            </div>
+
+            <div id="tcolum">
+                <p class="hcolum">Productos de Pago de Amazon</p>
+                <p class="pcolum">Compra con Puntos</p>
+                <p class="pcolum">Recarga tu Saldo</p>
+                <p class="pcolum">Conversor de divisas de Amazon</p>
+            </div>
+
+            <div id="focolum">
+                <p class="hcolum">Podemos Ayudarte</p>
+                <p class="pcolum">Amazon y el COVID- <br> 19</p>
+                <p class="pcolum">Tu Cuenta</p>
+                <p class="pcolum">Tus Pedidos</p>
+                <p class="pcolum">Tarifas de Envío y <br> Políticas</p>
+                <p class="pcolum">Devoluciones y <br> Reemplazos</p>
+                <p class="pcolum">Administrar <br> Contenido y <br> Dispositivos</p>
+                <p class="pcolum">Amazon Assistant</p>
+                <p class="pcolum">Ayuda</p>
+            </div>
+        </section><hr style="display: none;">
+
+        <section id="extend" style="border-top-color: rgb(194, 191, 191); border-top-style: solid; border-top-width: 0.1px;" >    <!--AQUI ESTA LA SEGUNDA FOTO LOGO AMAZON-->
+            <img src="https://o.remove.bg/downloads/2591f096-4d76-43df-85b2-604abc50c1fd/images-removebg-preview.png" alt="">
+            <div id="minidiva"><p>Español</p></div>
+            <div id="minidivb"><p>$ USD - dolar estadounidense</p></div>
+            <div id="minidivc">Estados Unidos</div>
+        </section>
+
+        <footer id="footer">
+            <div id="ffcolum">
+                <p class="fhcolum">Amazon Music</p>
+                <p class="fpcolum">Reproduce millones <br>de canciones</p>
+
+                <p class="fhcolum">Amazon Business</p>
+                <p class="fpcolum" style="margin-bottom: 70px;">Todo para <br> tu negocio</p>
+
+                <p class="fhcolum">Comi Xology</p>
+                <p class="fpcolum" >Miles de <br> Comics Digitales</p>
+
+                <p class="fhcolum">Kindle Direct Publishing</p>
+                <p class="fpcolum">Publica tu libro en papel y <br> digital <br>
+                    de manera independiente</p>
+                 
+                <p class="fhcolum">Wifi eero</p>
+                <p class="fpcolum">Video 4K en tiempo real en <br> todas las habitaciones</p>
+            </div>
+
+            <div id="sfcolum">
+                <p class="shcolum">Amazon <br> Advertising</p>
+                <p class="spcolum" style="margin-bottom: 20px;">Encontrar, atraer <br> y <br>
+                    captar clientes</p>
+
+                <p class="shcolum">AmazonGlobal</p>
+                <p class="spcolum" style="margin-bottom: 60px;">Pedidos de Envío <br>
+                    Internacional</p>
+
+                <p class="shcolum">DPReview</p>
+                <p class="spcolum" style="margin-bottom: 52px;">Fotografía
+                    Digital</p>
+
+                <p class="shcolum">Prime Video <br> Direct</p>
+                <p class="spcolum" style="margin-bottom: 30px;">Distribución de <br> Video <br>
+                        Sin Esfuerzo</p>
+
+                <p class="shcolum">Blink</p>
+                <p class="spcolum" style="margin-bottom: 40px;">Seguridad <br> inteligente <br>
+                    para todos los <br> hogares</p>
+            </div>
+
+            <div id="tfcolum">
+                <p class="thcolum">6pm</p>
+                <p class="tpcolum" style="margin-bottom: 45px;">Descubre ofertas <br>
+                    en marcas de moda</p>
+                
+                <p class="thcolum">Servicios para el <br> Hogar</p>
+                <p class="tpcolum" style="margin-bottom: 8px;">de Amazon <br>
+                    Profesionales <br> Elegidos a Mano <br>
+                    Garantía  de <br> Satisfacción</p>
+
+                <p class="thcolum">Fabric</p>
+                <p class="tpcolum" style="margin-bottom: 40px;">Costura, Acolchado <br>
+                    y Tejido</p>
+
+                <p class="thcolum">Shopbop</p>
+                <p class="tpcolum" style="margin-bottom: 55px;">Diseñador <br>
+                    Marcas de Moda</p>
+
+                <p class="thcolum">Neighbors App</p>
+                <p class="tpcolum" style="margin-bottom: 40px;">Alertas de <br> seguridad <br>
+                    y delitos en tiempo <br> real</p>
+                    
+                
+
+            </div>
+
+            <div id="fofcolum">
+                <p class="fohcolum">AbeBooks</p>
+                <p class="fopcolum" style="margin-bottom: 30px;">Libros, arte <br>
+                    & artículos de <br> colección</p>
+
+                <p class="fohcolum">Amazon Web  <br>Services</p>
+                <p class="fopcolum" style="margin-bottom: 50px;">Servicios de cómputo <br>
+                    en nube escalable</p>
+
+                <p class="fohcolum">Goodreads</p>
+                <p class="fopcolum" style="margin-bottom: 40px;">Análisis de libros <br>
+                    y recomendaciones</p>
+
+                <p class="fohcolum">Woot!</p>
+                <p class="fopcolum" style="margin-bottom: 55px;">Descuentos y <br>
+                    travesuras</p>
+                
+                <p class="fohcolum">Suscríbete con <br> Amazon</p>
+                <p class="fopcolum" style="margin-bottom: 60px;">a los servicios de suscripción <br>
+                    de <br> "Discover & try"</p>
+             </div>
+
+             <div id="ficolum">
+                <p class="fihcolum">ACX</p>
+                <p class="fipcolum" style="margin-bottom: 25px;">Editorial de <br> Audiolibros <br>
+                    Hecho Fácil</p>
+
+                <p class="fihcolum">Audible</p>
+                <p class="fipcolum" style="margin-bottom: 50px;">Escucha Libros e <br> Interpretaciones <br>
+                    de Audio Originales</p>
+
+                <p class="fihcolum">IMDb</p>
+                <p class="fipcolum" style="margin-bottom: 40px;">Películas, TV <br>
+                    y Celebridades</p>
+
+                <p class="fihcolum">Zappos</p>
+                <p class="fipcolum" style="margin-bottom: 58px;">Zapatos y <br>
+                    ropa</p>
+
+                <p class="fihcolum">PillPack</p>
+                <p class="fipcolum" style="margin-bottom: 40px;">Pharmacy simplificado</p>
+
+                
+             </div>
+
+             <div id="sxcolum">
+                <p class="sxhcolum">Venda en Amazon</p>
+                <p class="sxpcolum" style="margin-bottom: 40px;">Comience una cuenta de <br> venta</p>
+
+                <p class="sxhcolum">Box Office Mojo</p>
+                <p class="sxpcolum" style="margin-bottom: 60px;">Encuentra películas <br>
+                Datos de taquilla</p>
+
+                <p class="sxhcolum">IMDbPro</p>
+                <p class="sxpcolum" style="margin-bottom: 12px;">Obtén información de <br> entretenimiento <br>
+                    que los profesionales <br> necesitan</p>
+
+                <p class="sxhcolum">Ring</p>
+                <p class="sxpcolum" style="margin-bottom: 25px;">Casa Inteligente <br>
+                    Sistemas de Seguridad</p>
+
+                
+
+            
+            
+             </div>
+        </footer>
+
+        <footer class="extension">
+            <p class="sxhcolum">Condiciones de uso</p>
+            <p class="sxhcolum"> Aviso de privacidad</p>
+            <p class="sxhcolum"> Tus opciones de privacidad de los anuncios</p> <br> <br>
+            <p class="sxhcolum" id="finalp">© 1996-2023 Amazon.com, Inc. o sus afiliados</p>
+        </footer>
+    </main>
+
+    
+</body>
+</html>
